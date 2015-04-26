@@ -1,0 +1,14 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  first_name: test
+  last_name: test
+  email: test@email.fake
+  username: testtesttest
+
+two:
+  first_name: test
+  last_name: test
+  email: blank
+  username: testtesttest
+

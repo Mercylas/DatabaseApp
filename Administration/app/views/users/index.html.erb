@@ -1,0 +1,29 @@
+<h1>User Database</h1>
+<%= link_to 'New User', new_user_path %>
+<br>
+<br>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Username</th>
+      <th></th>
+      <th>Options</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= image_tag user.profile_image.url(:thumb) %></td> <td><%= link_to user.username, user %></td>
+        <td></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %> 
+          <% ' '%>
+          <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
